@@ -2,14 +2,17 @@
 
 \#MakeHTMLAProgrammingLanguageAgain
 
-Compile the HTPL Transpiler with:
+Compile the HTPL Compiler with:
 
 ```
 $ g++ compiler.cpp -o compiler
 ```
 
-Then you can transpile HTPL files into C as follows:
+Then you can compile HTPL files as follows:
 
 ```
-$ ./compile input_file.htpl output_file.c
+$ ./compile input_file.htpl output_file
 ```
+
+The transpiled C source code file will be kept as `output_file.c`.
+GCC is needed as a dependency.
