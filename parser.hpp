@@ -82,9 +82,9 @@ class Parser {
 		size_t col = 0;
 		Tag root_tag;
 
-		Parser(const char *filename)
+		Parser(string filename)
 		{
-			file = fopen(filename, "r");
+			file = fopen(filename.c_str(), "r");
 			root_tag.name = "root";
 			root_tag.body = parse_inner("root");
 			root_tag.line = 1;

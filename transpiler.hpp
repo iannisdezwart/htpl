@@ -19,9 +19,9 @@ class Transpiler {
 	public:
 		FILE *file;
 
-		Transpiler(Tag& root_tag, const char *file_path)
+		Transpiler(Tag& root_tag, string file_path)
 		{
-			file = fopen(file_path, "w");
+			file = fopen(file_path.c_str(), "w");
 
 			for (size_t i = 0; i < root_tag.body.size(); i++) {
 				transpile_tag(root_tag.body[i], 0);
